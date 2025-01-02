@@ -8,12 +8,22 @@ import gsap from 'gsap';
 
 function App() {
   const [showCanvas, setShowCanvas] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const showCanvasRef = useRef(null);
   const growSpanref = useRef(null);
 
   useEffect(() => {
     const locomotiveScroll = new LocomotiveScroll();
   }, [])
+
+  useEffect(() => {
+    gsap.to('body', {
+      color: darkMode ? "#fff" : "#000",
+      backgroundColor: darkMode ? "#000" : "#fff", 
+      duration: 1,
+      ease: 'power2.inOut'
+    });
+  }, [darkMode]);
   
   useEffect(() => {
     const handleClick = (e) => {
@@ -78,11 +88,17 @@ function App() {
             <div className='brand   text-2xl font-regular'>
               <h1>thirtysixstudio</h1>
             </div>
-            <div className='links flex gap-10'>
+            <div className='links flex gap-10 items-center'>
               {["What we do", "Who we are", "How we give back", "Talk to us"].map((link, index) => (
                 <a key={index} href={`#${link.toLowerCase()}`}
                 className='text-medium hover:text-gray-300'>{link}</a>
               ))}
+              <button 
+                onClick={() => setDarkMode(!darkMode)}
+                className='flex justify-center items-center w-14 h-8 rounded-full border border-gray-400 hover:bg-gray-500'
+              >
+                {darkMode ? <img className='w-[35%]' src="/src/assets/light-mode.svg" alt="" /> : <img className='w-[35%]' src="/src/assets/dark-mode.svg" alt="" />}
+              </button>
             </div>
           </nav>
 
@@ -95,7 +111,7 @@ function App() {
               </h3>
 
               <p className='text-lg w-[80%] mt-10 font-thin leading-[1.5]'>
-                We’re a boutique production studio focused on design, motion, and creative technology, constantly reimagining what digital craft can do for present-time ads and campaigns.
+                We're a boutique production studio focused on design, motion, and creative technology, constantly reimagining what digital craft can do for present-time ads and campaigns.
               </p>
 
               <p className='text-medium w-[80%] mt-10 font-md leading-[1.5]'>
@@ -126,7 +142,7 @@ function App() {
 
         <h1 className='text-5xl'>About the studio</h1>
         
-        <p className='text-2xl w-[80%] mt-10 font-thin pl-10 leading-[1.8]'>We provide captivating design, interactive animations, advanced usability, reliable code, and immaculate project coordination. Whether you need a campaign built from scratch or assistance at a specific phase, we’ve got you covered.</p>
+        <p className='text-2xl w-[80%] mt-10 font-thin pl-10 leading-[1.8]'>We provide captivating design, interactive animations, advanced usability, reliable code, and immaculate project coordination. Whether you need a campaign built from scratch or assistance at a specific phase, we've got you covered.</p>
 
       </div>
 
