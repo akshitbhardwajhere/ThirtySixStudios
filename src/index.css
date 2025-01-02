@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body, html {
+    overflow: hidden;
+}
+
+body {
+    /* background-color: #fd2c2a; */
+    background-color: #000;
+    color: #fff;
+}
+
+canvas {
+    pointer-events: none;
+}
+
+span.grow {
+    background-color: #fd2c2a;
+}
