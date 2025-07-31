@@ -83,7 +83,8 @@ function App() {
             return <Canvas key={index} details={canvasDetails} />;
           })}
 
-        <div className="w-full h-screen relative">{/* rest of content */}
+        <div className="w-full h-screen relative">
+          {/* rest of content */}
           <nav className="w-full p-2 sm:p-4 flex justify-between items-center border-b border-gray-400">
             <div className="brand text-lg sm:text-xl md:text-2xl font-regular">
               <h1>thirtysixstudio</h1>
@@ -181,7 +182,9 @@ function App() {
             return <Canvas key={index} details={canvasDetails} />;
           })}
 
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">About the studio</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+          About the studio
+        </h1>
 
         <p className="text-lg sm:text-xl md:text-2xl w-full md:w-[90%] lg:w-[80%] mt-6 sm:mt-8 md:mt-10 font-thin pl-0 sm:pl-5 md:pl-10 leading-[1.6] sm:leading-[1.7] md:leading-[1.8]">
           We provide captivating design, interactive animations, advanced
@@ -192,53 +195,61 @@ function App() {
       </div>
 
       {/* Additional responsive sections */}
-      
-      <div className='relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-10'>
-        {showCanvas && data[2].map((canvasDetails, index) => {
-            return <Canvas key={index} details={canvasDetails} />
-           })}
+
+      <div className="relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-10">
+        {showCanvas &&
+          data[2].map((canvasDetails, index) => {
+            return <Canvas key={index} details={canvasDetails} />;
+          })}
       </div>
 
-      <div className='relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-10'>
-        {showCanvas && data[3].map((canvasDetails, index) => {
-            return <Canvas key={index} details={canvasDetails} />
-           })}
+      <div className="relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-10">
+        {showCanvas &&
+          data[3].map((canvasDetails, index) => {
+            return <Canvas key={index} details={canvasDetails} />;
+          })}
       </div>
 
-      <div className='relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-10'>
-        {showCanvas && data[4].map((canvasDetails, index) => {
-            return <Canvas key={index} details={canvasDetails} />
-           })}
+      <div className="relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-10">
+        {showCanvas &&
+          data[4].map((canvasDetails, index) => {
+            return <Canvas key={index} details={canvasDetails} />;
+          })}
       </div>
 
-      <div className='relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-10'>
-        {showCanvas && data[5].map((canvasDetails, index) => {
-            return <Canvas key={index} details={canvasDetails} />
-           })}
+      <div className="relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-10">
+        {showCanvas &&
+          data[5].map((canvasDetails, index) => {
+            return <Canvas key={index} details={canvasDetails} />;
+          })}
       </div>
 
-      <div className='relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-10'>
-        {showCanvas && data[6].map((canvasDetails, index) => {
-            return <Canvas key={index} details={canvasDetails} />
-           })}
+      <div className="relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-10">
+        {showCanvas &&
+          data[6].map((canvasDetails, index) => {
+            return <Canvas key={index} details={canvasDetails} />;
+          })}
       </div>
 
-      <div className='relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-10'>
-        {showCanvas && data[7].map((canvasDetails, index) => {
-            return <Canvas key={index} details={canvasDetails} />
-           })}
+      <div className="relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-10">
+        {showCanvas &&
+          data[7].map((canvasDetails, index) => {
+            return <Canvas key={index} details={canvasDetails} />;
+          })}
       </div>
 
-      <div className='relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-10'>
-        {showCanvas && data[8].map((canvasDetails, index) => {
-            return <Canvas key={index} details={canvasDetails} />
-           })}
+      <div className="relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-10">
+        {showCanvas &&
+          data[8].map((canvasDetails, index) => {
+            return <Canvas key={index} details={canvasDetails} />;
+          })}
       </div>
 
-      <div className='relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-10'>
-        {showCanvas && data[9].map((canvasDetails, index) => {
-            return <Canvas key={index} details={canvasDetails} />
-           })}
+      <div className="relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-10">
+        {showCanvas &&
+          data[9].map((canvasDetails, index) => {
+            return <Canvas key={index} details={canvasDetails} />;
+          })}
       </div>
     </>
   );
