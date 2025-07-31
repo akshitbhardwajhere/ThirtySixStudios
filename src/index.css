@@ -2,14 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base responsive styles */
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 640px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1280px) {
+    html {
+        font-size: 18px;
+    }
+}
+
 body, html {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    body, html {
+        overflow-y: auto;
+    }
 }
 
 body {
     /* background-color: #fd2c2a; */
     background-color: #000;
     color: #fff;
+    min-height: 100vh;
 }
 
 canvas {
@@ -18,4 +43,55 @@ canvas {
 
 span.grow {
     background-color: #fd2c2a;
+}
+
+/* Responsive canvas container */
+@media (max-width: 640px) {
+    canvas {
+        transform: scale(0.8);
+        transform-origin: center;
+    }
+}
+
+@media (max-width: 480px) {
+    canvas {
+        transform: scale(0.6);
+        transform-origin: center;
+    }
+}
+
+/* Ensure responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile touch improvements */
+@media (max-width: 768px) {
+    /* Improve touch targets */
+    button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Prevent text selection on touch */
+    .cursor-pointer {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Prevent zoom on input focus */
+    input, select, textarea {
+        font-size: 16px;
+    }
+}
+
+/* Landscape mobile adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+    .text-container {
+        padding-top: 1rem;
+    }
 }
